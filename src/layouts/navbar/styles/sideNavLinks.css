@@ -1,0 +1,21 @@
+.nav-item{
+    display: flex;
+    font-size: 1rem;
+    text-transform:  capitalize;
+    padding: 1rem;
+    transition: all 0.3;
+    height: 50px;
+    text-align: left;
+    align-items: left;
+    width: 50%;
+    font-weight: normal;
+
+}
+.nav-item:hover{
+    height: 50px;
+    width: 50%;
+    border-radius: 4px;
+    transition: 300ms;
+    background: #392A6D;
+
+}

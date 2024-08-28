@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Ubuntu&display=swap');
+
+.div-container{
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+
+}
+.logo {
+    font-size: 8rem;
+    color: #4C5ADF;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+  
+  
+  /* Hover effect */
+.logo {
+transition: transform 0.3s ease-in-out;
+transform: scale(1.25);
+}
+
+.alpha-info-para{
+    font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+    line-height: 1.35;
+    font-weight: normal;
+}
+
+.alpha-info{
+    align-items: end;
+    padding-left: 11rem;
+}
+.alpha-info-button{
+    border-radius: 4px;
+}
+.info{
+    text-align: left;
+}
+
+@media (max-width:1150px) 
+{
+    .alpha-window 
+    {
+        display: none;
+        padding-left: 0rem;
+    }
+
+    .alpha-info{
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        align-items: center;
+
+    }
+    .alpha-info-detail{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .info{
+        text-align: center;
+    }
+}
+
+
+@media (max-width:1100px) 
+{
+    .logo {
+        font-size: 8rem;
+    }
+    .logo-name {
+        font-size: 3.25rem;
+    }
+    .alpha-info-button{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        width: 12rem;
+        font-size: large;
+    }
+}
+
+@media (max-width:600px) 
+{
+    .logo {
+        font-size: 4rem;
+    }
+    .logo-name {
+        font-size: 2.25rem;
+    }
+    .alpha-info-button{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        width: 12rem;
+        font-size: large;
+    }
+}

@@ -1,0 +1,20 @@
+
+.product-item-problems-link:focus-visible{
+    outline: none;
+}
+.product-xblogs-link:focus-visible{
+    outline: none;
+}
+.product-item-problems:focus{
+    outline: 0;
+}
+.product-item-problems:hover{
+    color: white !important;
+    background: rgb(0 24 45);
+    transition-duration: 200ms;
+}
+.product-xblogs:hover{
+    color: whitesmoke !important;
+    background: #890023;
+    transition-duration: 200ms;
+}

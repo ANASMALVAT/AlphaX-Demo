@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Open+Sans:wght@300&family=Ubuntu:wght@300;400&display=swap');
+
+
+.gpt-window-text{
+    font-family: Ubuntu,Helvetica,Arial,sans-serif;
+
+}
+.text-data{
+    font-family: Ubuntu,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+
+.code-block::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+.code-block::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 8px;
+    margin:5px;
+  }
+  
+.code-block::-webkit-scrollbar-thumb {
+    background: #5867EA;
+    border-radius: 8px;
+  }

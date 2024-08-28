@@ -1,0 +1,18 @@
+.input-field{
+    background: transparent;
+}
+.label-text{
+    color: rgb(218, 217, 217);
+    font-size: 16px;
+
+}
+.input-field:focus {
+    /* border-color: #3E49B4 */
+
+}
+.input-field:focus::placeholder {
+    color: rgb(165, 163, 163);
+}
+.input-field::placeholder{
+    color: rgb(75 85 99);
+}

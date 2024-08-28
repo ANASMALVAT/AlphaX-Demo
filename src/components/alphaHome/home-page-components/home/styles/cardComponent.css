@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;400&family=Ubuntu:wght@300;400&display=swap');
+
+
+.card-css{
+    color:#4C5ADF;
+    width: 375px;
+}
+
+.card-css:hover{
+    background: transparent;
+}
+
+@media (max-width:500px){
+    .card-css{
+        margin: auto;
+        margin-bottom: 10px;
+        width: 375px;
+    }
+    .text-2xl{
+        font-size: 22px;
+    }
+}
+
+@media (max-width:400px){
+    .card-css{
+        margin: auto;
+        margin-bottom: 10px;
+        width: 350px;
+    }
+    .text-2xl{
+        font-size: 20px;
+    }
+}

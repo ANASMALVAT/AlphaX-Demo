@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;400&family=Ubuntu:wght@300;400&display=swap');
+
+.who-we-are{
+    display:flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.h1-tag-c4{
+    width: 100%;
+    font-family: IBM Plex Sans,sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+
+}
+.h1-tag-div{
+    width:40%
+}
+.card-items{
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    flex-basis: 33.33333;
+}
+.card-items > div{
+    flex: 0 0 33%; 
+}
+
+
+@media (max-width: 1200px){
+    .who-we-are{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4rem;
+        
+    }
+    .h1-tag-div{
+        width: 75%;
+    }
+}
+
+@media (max-width: 800px){
+    .h1-tag{
+        font-size: 38px;
+    }
+    
+    .h1-tag-div{
+        width: 85%;
+    }
+}
+@media (max-width: 600px){
+    .h1-tag{
+        font-size: 34px;
+    }
+    .h1-tag-div{
+        width: 100%;
+    }
+}
+@media (max-width: 400px){
+    .h1-tag{
+        font-size: 30px;
+    }
+}

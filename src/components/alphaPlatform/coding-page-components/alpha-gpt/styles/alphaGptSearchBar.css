@@ -1,0 +1,20 @@
+
+.text-area::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .text-area::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 8px;
+    margin:5px;
+  }
+  
+  .text-area::-webkit-scrollbar-thumb {
+    background: #5867EA;
+    border-radius: 8px;
+  }
+
+  textarea{
+    font-family: monospace;
+    font-size: 18px;
+  }

@@ -1,0 +1,43 @@
+.alpha-block{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.alpha-description{
+    margin-left: 10px;
+    text-align: left;
+    font-weight: light;
+    
+}
+
+.check-icon{
+    font-weight: 900;
+}
+
+.alpha-block{
+    padding: 5px;
+    padding-left: 0px;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+@media (max-width:1150px) {
+    .alpha-block{
+        margin-left: 50px;
+        justify-content:left;
+        margin: 0px
+    }
+    .alpha-description{
+        font-size: 20px;
+        
+    }
+
+}
+
+
+@media (max-width:500px) {
+    .alpha-description{
+        font-size: 18px;
+    }
+}

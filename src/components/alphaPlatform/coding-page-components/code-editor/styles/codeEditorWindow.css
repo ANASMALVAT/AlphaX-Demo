@@ -1,0 +1,75 @@
+.react-monaco-editor-container {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.monaco-editor{
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.code-editor{
+  height: 100%;
+}
+  
+.editor-wrapper{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-radius: 4px;
+}
+.monaco-editor {
+    font-family: 'Fira Code', monospace;
+  }
+.margin-view-overlays{
+  opacity: 1;
+  border-right: 1px solid #4C5ADF;
+}
+
+
+.side-menu-editor{
+    display:none;
+
+}
+
+
+@media (max-width: 1100px) {
+    .logo{
+     margin-left: 10px;
+     margin-right: 10px;
+    }
+    .language-button{
+      display: none;
+    }
+    .side-menu-editor{
+      display: flex;
+      min-width: 75px;
+    }
+
+}
+
+@media (max-width: 480px) {
+  .editor-logo{
+   display: none;
+  }
+}
+
+@media (max-width: 385px) {
+  .side-menu-editor{
+    min-width: 125px;
+  }
+  .editor-logo{
+    display: none;
+  }
+  .button-disappear {
+      display: none;
+      width: 0px;
+    }
+}
+
+
+
+
+
+

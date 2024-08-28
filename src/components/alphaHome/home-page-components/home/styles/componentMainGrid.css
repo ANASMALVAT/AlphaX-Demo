@@ -1,0 +1,35 @@
+@media (max-width:1440px) {
+    .grid-i{
+        display: none;
+    }
+}
+@media (max-width:1280px) {
+    .grid-h{
+        display: none;
+    }
+}
+@media (max-width:1120px) {
+    .grid-g{
+        display: none;
+    }
+}
+@media (max-width:960px) {
+    .grid-f{
+        display: none;
+    }
+}
+@media (max-width:800px) {
+    .grid-e{
+        display: none;
+    }
+}
+@media (max-width:640px) {
+    .grid-d{
+        display: none;
+    }
+}
+@media (max-width:480px) {
+    .grid-c{
+        display: none;
+    }
+}

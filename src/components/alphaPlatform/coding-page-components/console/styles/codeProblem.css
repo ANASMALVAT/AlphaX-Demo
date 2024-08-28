@@ -1,0 +1,68 @@
+.problem-question{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.8285714em;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.problem-company{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.8285714em;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.blurred {
+  filter: blur(5px);
+}
+
+.code-problem{
+    width: 100%;
+    flex-grow: 1;
+    padding: 1.2rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: white;
+  }
+  
+.code-problem::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 4px;
+}
+
+
+.code-problem::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 8px;
+    margin:5px;
+}
+
+.code-problem::-webkit-scrollbar-thumb {
+    background: #5867EA;
+    border-radius: 8px;
+}
+
+
+.hint:hover{
+  cursor: pointer;
+}
+
+  
+  
+  .h-16 {
+    height: 4rem;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .code-problem {
+      padding: 15px;
+    }
+  
+  }
+  
+  

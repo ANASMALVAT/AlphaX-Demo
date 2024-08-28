@@ -1,0 +1,128 @@
+.enviorment{
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.common-margin-enviorment{
+    margin-left: 20%
+}
+
+.enviorment-header{
+    font-size: 32px;
+    font-weight: 300;
+    color: white;
+}
+
+.enviorment-text{
+    font-size: 17px;
+     text-align: left;
+}
+
+.div-enviorment{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+}
+
+.enviorment-grid{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    height: 100%;
+    width: 48%;
+    margin-left: 2%;
+}
+
+.enviorment-img{
+    width: 93%;
+}
+
+.enviorment-cards > div {
+    flex: 35%;
+}
+
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes skewYAnimation {
+    0% {
+      transform: skewY(0deg);
+    }
+    100% {
+      transform: skewY(360deg);
+    }
+  }
+
+@media (max-width:1100px) {
+    .common-margin-enviorment{
+        margin: 0px;
+    }
+    .enviorment-grid{
+        display: none;
+    }
+
+    .enviorment{
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        height: 825px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .div-enviorment{
+        margin:0px;
+        width: 80%;
+        text-align: center;
+        gap: 2rem;
+    }
+    .enviorment-header{
+        margin: auto;
+    }
+    .enviorment-header-text{
+        margin: auto;
+    }
+
+    .enviorment-text{
+        margin: auto;
+        text-align: center;
+        width: 90%;
+    }
+    .enviorment-cards{
+        margin: auto;
+    }
+}
+
+@media (max-width:730px) {
+    .enviorment{
+        min-height: 1300px;
+    }
+    .enviorment-text{
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
+@media (max-width:500px) {
+    .enviorment{width: 100%;}
+    .div-enviorment{
+        width: 90%;
+    }
+    .enviorment-header{
+        font-size: 28px;
+    }
+    .enviorment-text{
+        font-size: 16px;
+    }
+}

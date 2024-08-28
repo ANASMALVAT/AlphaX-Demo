@@ -1,0 +1,6 @@
+.arrow-font:hover{
+    transition: all 300ms;
+    scale: 1.15;
+    border: 0.25px solid lightgray;
+    box-shadow: rgba(0.2, 0.4, 0.1, 0.2) 2px 0px 2px 2px;
+}

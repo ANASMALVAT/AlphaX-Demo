@@ -1,0 +1,59 @@
+.solution-blurred{
+  filter: blur(5px);
+}
+.icon-hover:hover{
+  scale: 1.25;
+  transition: 300ms;
+  color: #F37F1B;
+}
+
+.scroll-bar {
+    scrollbar-width: thin;
+    scrollbar-color: #4C5ADF #011627;
+    padding: 1rem;
+  }
+
+  .solution-layout::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .solution-layout::-webkit-scrollbar-track {
+    background: #1B3B6F;
+    border-radius: 8px;
+
+  }
+  
+  .solution-layout::-webkit-scrollbar-thumb {
+    background: #4C5ADF;
+    border-radius: 8px;
+  } 
+  .solution-layout{
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .solution{
+    width: 100%;
+    
+  }
+
+  .relevant-links{
+    min-width: 200px;
+    max-width: 200px;
+  }
+
+  @media screen and (max-width: 1300px) {
+    .solution-layout{
+      min-width: 95%;
+    } 
+    .solution-code{
+      min-width: 100%;
+    }
+    .solution-explanation{
+      min-width: 100%;
+    }
+    .relevant-links{
+      min-width: 200px;
+      max-width: 200px;
+    }
+  }

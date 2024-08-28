@@ -1,0 +1,53 @@
+
+.console-algo-buttons, .console-console-buttons {
+    justify-content: start;
+}
+
+.output-input {
+    scrollbar-width: thin;
+    scrollbar-color: #4C5ADF #011627;
+  }
+
+  .output-input::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .output-input::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 8px;
+  }
+
+  .output-input::-webkit-scrollbar-thumb {
+    background: #4C5ADF;
+    border-radius: 8px;
+  } 
+
+
+.output-input{
+    flex-grow: 1;
+}
+
+.main-console{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (min-width: 0px) and (max-width: 1150px) 
+{
+    .show-buttons {
+      display: flex;
+      flex-direction: row;
+    }
+    .console-run-button {
+      margin: auto;
+    }
+    .main-console{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+  

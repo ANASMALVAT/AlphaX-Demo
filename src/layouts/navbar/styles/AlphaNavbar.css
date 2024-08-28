@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Ubuntu:wght@300;400&display=swap');
+
+.logo{
+    font-family: Ubuntu,Helvetica,Arial,sans-serif;
+    font-weight:400 ;
+}
+
+@media(min-width:881px){
+    .sideNav{
+        display: none;
+    }
+}
+@media (max-width:880px){
+    .nav{
+        display: none;
+    }
+    .sideNav{
+        display: flex;
+    }
+    .nav-item{
+        text-align: center;
+    }
+    .logo{
+        justify-content: center;
+        align-items: center;
+    }
+    .login-ul{
+        padding: 0px;
+    }
+}
+
+.display-flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.display-flex-col{
+    display: flex;
+    flex-direction:column;
+    text-align: left;
+    align-items: start;
+
+}
+.nav-item{
+    margin: 4px;
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Ubuntu:wght@300;400&display=swap');
+
+h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.algo-screen{
+  transition: transform 1s ease;
+  animation: fadeIn;
+  animation-duration: 2s;
+  box-shadow: rgba(0.4, 0.4, 0.4, 0.5) 0px 22px 70px 4px;
+  background: #011627;
+  background-color: #011627;
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #4C5ADF #011627;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #011627;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #4C5ADF;
+    border-radius: 8px;
+  }
+  

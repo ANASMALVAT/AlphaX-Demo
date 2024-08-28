@@ -1,0 +1,20 @@
+.code-output{
+  width: 100%;
+  flex-grow: 1;
+}
+
+span::-webkit-scrollbar,.code-output::-webkit-scrollbar {
+    width: 3px;
+    height: 4px;
+  }
+  
+  span::-webkit-scrollbar,.code-output::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 4px;
+  margin:5px;
+}
+
+span::-webkit-scrollbar,.code-output::-webkit-scrollbar-thumb {
+  background: #5867EA;
+  border-radius: 4px;
+}

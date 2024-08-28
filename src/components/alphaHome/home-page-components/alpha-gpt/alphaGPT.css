@@ -1,0 +1,119 @@
+.alpha{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.common-margin{
+    margin-left: 10%
+}
+
+.alpha-header{
+    font-size: 32px;
+    font-family: IBM Plex Sans,sans-serif;
+}
+
+.alpha-text{
+    font-size: 18px;
+
+}
+
+.div-alpha{
+    display: flex;
+    justify-content:left;
+    margin-right: auto;
+    margin: auto;
+    width: 50%;
+
+}
+
+.alpha-grid{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 600px;
+    height: 100%;
+    width: 50%;    
+}
+
+
+.alpha-img{
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    box-shadow: rgba(0.4, 0.2, 0.2, 0.9) 0px 22px 70px 4px;
+
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes skewYAnimation {
+    0% {
+      transform: skewY(0deg);
+    }
+    100% {
+      transform: skewY(360deg);
+    }
+  }
+
+  @media (max-width:1200px) {
+    .alpha-grid{
+        width: 55%;
+    }
+    .common-margin{
+        margin-left: 0%
+    }
+}
+
+@media (max-width:1150px) {
+
+    .alpha-grid{
+        display: none;
+    }
+    .div-alpha{
+        margin:0px;
+        width: 80%;
+        max-width: 700px;
+        margin: auto;
+        text-align: center;
+        gap: 2rem;
+        padding: 0px;
+    }
+    .alpha-header{
+        text-align: center;
+        margin: auto;
+    }
+    .alpha{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        height: 600px;
+    }
+    .alpha-text{
+        margin: auto;
+        text-align: center;
+    }
+    .alpha-cards{
+        margin: auto;
+    }
+}
+
+@media (max-width:500px) {
+    .div-alpha{
+        width: 90%;
+
+    }
+    .alpha-header{
+        font-size: 28px;
+    }
+    .alpha-text{
+        font-size: 16px;
+    }
+}

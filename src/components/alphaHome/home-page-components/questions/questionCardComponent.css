@@ -1,0 +1,45 @@
+.question{
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.common-margin-question{
+    margin-left: 11%
+}
+
+.question-header{
+    font-size: 32px;
+    font-weight: 300;
+    color: #00182D;
+}
+
+.question-text{
+    font-size: 17px;
+     text-align: left;
+}
+
+.div-question{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+@media (max-width:1200px) {
+   
+    .common-margin-question{
+        margin-left: 0px
+    }
+    .question-header{
+        text-align: center;
+    }
+    .question-text{
+        text-align: center;
+    }
+    .question-cards{
+        justify-content: center;
+    }
+}
+

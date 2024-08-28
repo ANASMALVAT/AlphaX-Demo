@@ -1,0 +1,46 @@
+.language-block{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.language-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #4C5ADF;
+    font-size: 48px;
+}
+.language-img:hover{
+    scale: 1.25;
+    transition: 300ms all;
+}
+.language-description{
+    font-size: 1.1rem;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+@media (max-width:1000px) {
+}
+
+@media (max-width:500px) {
+
+    .language-description{
+        font-size: 0.9rem;
+    }
+    .language-name{
+        font-size: 1.2rem;
+    }
+    .language-text{
+        font-size: 16px;
+    }
+    .language-img{
+        font-size: 40px;
+    }
+}

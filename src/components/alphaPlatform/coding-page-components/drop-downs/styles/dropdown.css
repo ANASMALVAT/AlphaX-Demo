@@ -1,0 +1,19 @@
+  .css-2qlhnp-menu{
+    scrollbar-width: thin;
+    scrollbar-color: #4C5ADF #011627;
+    
+  }
+  
+  .css-2qlhnp-menu::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .css-2qlhnp-menu::-webkit-scrollbar-track {
+    background: #011627;
+  }
+  
+  .css-2qlhnp-menu::-webkit-scrollbar-thumb {
+    background: #4C5ADF;
+    border-radius: 8px;
+  }
+  

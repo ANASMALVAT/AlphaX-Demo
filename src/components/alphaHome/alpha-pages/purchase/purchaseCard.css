@@ -1,0 +1,27 @@
+Y
+.item-list{
+    margin-bottom: 2.5rem;
+    align-items: start;
+    margin-left: 1rem;
+    gap: 1rem;
+}
+.item{
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    font-size: 14px;
+    color: black;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    
+}
+
+.card-action{
+    justify-content: space-between;
+}
+
+.price{
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}

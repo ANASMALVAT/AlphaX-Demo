@@ -1,0 +1,38 @@
+h2{
+    font-family: Ubuntu,Helvetica,Arial,sans-serif;
+    font-size: 28px;
+    text-align: center; 
+}
+
+.category-easy,
+.category-medium,
+.category-hard,
+.category-special {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInAnimation 1s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* Add specific delays for each category */
+.category-medium {
+    animation-delay: 0.3s;
+  }
+  
+  .category-hard {
+    animation-delay: 0.4s;
+  }
+  
+  .category-special {
+    animation-delay: 0.5s;
+  }
