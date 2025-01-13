@@ -76,25 +76,26 @@ const LoginComponent = () => {
 
     return (
         
-        <div className='flex flex-col rounded-lg   bg-[#FFFFFF] h-[325px] w-[300px] border-t-[5px] border-[#626EE3] '>
-                <div className=' !font-thin w-[225px] mx-auto mb-4  h-1/4 flex flex-col text-left justify-center mt-4'>
+        <div className=' flex flex-col rounded-lg   bg-[#FFFFFF] h-[325px] w-[300px] border-t-[5px] border-[#626EE3] '>
+                <div className=' !font-thin w-[225px] mx-auto mt-12  h-1/4 flex flex-col text-left justify-center '>
                   <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-800 md:text-2xl dark:text-white">
                     Sign in to Alpha Algo
                   </h1>
                 </div>
 
-                <div className=' flex  flex-col justify-center mt-2 gap-2 rounded-md items-center'>
-                  { loginCredentials?.google_id &&
-                  <GoogleLogin
-                      className=' w-[225px] m-auto  font-semibold text-center placeholder:font-semibold text-white placeholder-gray-200::placeholder	'
-                      clientId={loginCredentials?.google_id}
-                      onSuccess={onGoogleSuccess}
-                      onFailure={onGoogleFailure}
-                      cookiePolicy='single_host_origin'
-                      onClick={loadGoogleapi}
-                      >
-                      <span className='text-gray-800 font-normal  text-[16px] ml-1'>Google</span>
-                  </GoogleLogin>
+                <div className=' flex mb-4 flex-col justify-center items-center mt-2 gap-2 rounded-md h-full'>
+                  { 
+                  // loginCredentials?.google_id &&
+                  // <GoogleLogin
+                  //     className=' w-[225px] m-auto  font-semibold text-center placeholder:font-semibold text-white placeholder-gray-200::placeholder	'
+                  //     clientId={loginCredentials?.google_id}
+                  //     onSuccess={onGoogleSuccess}
+                  //     onFailure={onGoogleFailure}
+                  //     cookiePolicy='single_host_origin'
+                  //     onClick={loadGoogleapi}
+                  //     >
+                  //     <span className='text-gray-800 font-normal  text-[16px] ml-1'>Google</span>
+                  // </GoogleLogin>
                   }
                   {
                   loginCredentials?.github_id &&

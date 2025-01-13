@@ -28,15 +28,36 @@ function App() {
   const dispatch = useDispatch();
 
   useLayoutEffect(async () => {
-    toast.success(
-      `This is demo version, 
-        No Login Needed`,
-      {
-        position: "top-center",
-        autoClose: false,
-        theme:"dark"
-      }
-    );        
+      try{
+        const response = await fetchLoginCredentials();
+        dispatch(setLoginCredentials(response.credentials));
+        if(localStorage.getItem('csrf-token')){
+          const verifyResult = await verifyToken();
+          if(!verifyResult.success){
+            dispatch(toggelUserLoginFalse());
+            localStorage.clear();
+          }else{
+            dispatch(toggelUserLoginTrue());
+            dispatch(setAlphaUser({
+                user_mail: verifyResult.userData.user_mail,
+                user_name: verifyResult.userData.user_name,
+                user_profile: verifyResult.userData.user_profile
+              }));
+            sessionStorage.setItem('user_completed_problems',JSON.stringify(verifyResult.userData.user_completed_problems));
+            const userMembership = await verifyMembership();
+            const userMembershipData = userMembership.data;
+            if(userMembershipData?.success && userMembershipData?.isPremium && userMembershipData?.premiumUser){
+              dispatch(setAlphaPremiumUser(userMembershipData.premiumUser));
+            }
+          }
+        }
+        else{
+          dispatch(toggelUserLoginFalse());
+        }
+    }
+    catch(error) {
+      toast("Alpha Algo is under maintainence!");
+    }
   },[])
 
   return (
@@ -63,7 +84,6 @@ function App() {
           <Route path="/reviews" element={<ReviewPage/>} />
           <Route path="/reviews/submit" element={<SubmitReivew/>} />
           <Route path="/xvlogs" element={<AlphaVlogsMain/>} />
-          
         </Routes>
       </BrowserRouter>
     </div>

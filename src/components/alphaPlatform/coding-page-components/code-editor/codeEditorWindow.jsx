@@ -134,7 +134,7 @@ const CodeEditorWindow = ({onChangeData,code,outputDetail,runCode }) =>
                 <div className=" buttons flex  text-center align-center rounded-sm ">
 
 
-                    {/* <Popup
+                    <Popup
                         trigger={
                             <button onClick={handleRestore}  className={`button-disappear overflow-hidden mr-2 h-12  flex flex-row items-center border-b-4 border-algoXcolor rounded-sm px-4 py-2 font-mono text-sm font-normal text-white ${false ? 'bg-[#1C283B]' : 'bg-[#12151D]'}`}>
                                 <RestoreIcon style={{  fontSize: '26px',color:"purple", color:"white",marginRight:"4px"}}/>
@@ -151,7 +151,7 @@ const CodeEditorWindow = ({onChangeData,code,outputDetail,runCode }) =>
                                 <h1 className=' text-white text-[17px]'>Restore Code</h1>
                             </div>
                         </div>
-                    </Popup> */}
+                    </Popup>
                    
 
                 <button  onClick={openSettingPane} className={`  overflow-hidden mr-2 flex h-12 flex-row items-center   border-b-4 border-algoXcolor rounded-sm px-4 py-2 font-mono text-sm font-normal text-white ${false ? 'bg-[#1C283B]' : 'bg-[#12151D]'}`}>

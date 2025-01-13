@@ -21,6 +21,7 @@ import { loading_image } from "../../utils/constants";
 import "./styles/mainPage.css";
 import "react-toastify/dist/ReactToastify.css";
 
+import { verifyToken } from "../../services/verifyToken";
 
 const AlphaPlatform = ({}) => {
 
@@ -120,10 +121,13 @@ const AlphaPlatform = ({}) => {
   {
     async function fetchData() {
       try {
-        
+        if (localStorage.getItem('csrf-token') == null) {
+          setIsLoading(false);
+          setIsLoggedIn(false);
+          return;
+        }
         localStorage.removeItem('stored-messages');
         const problemDetail = await authorizedUser(problemId);
-        console.log(problemDetail);
         if(problemDetail){
             handleSuccess(problemDetail.data);
           }
@@ -238,6 +242,18 @@ const AlphaPlatform = ({}) => {
       return;
     }
 
+    try{
+      const verifyResult = await verifyToken();
+      if(!verifyResult.success){
+        dispatch(toggelUserLoginFalse);
+        handleSessionExpired();
+        return;
+      }
+    }catch(error){
+      dispatch(toggelUserLoginFalse);
+      handleSessionExpired();
+      return;
+    }
     if(!runCode){
       const currentDateTime = new Date().toLocaleString('en-GB', { timeZone: 'UTC' });
       let userSubmission = JSON.parse(sessionStorage.getItem('user-submission')) || [];
@@ -344,6 +360,22 @@ const AlphaPlatform = ({}) => {
             </div>
         </div>
         )
+  }
+
+  if(!isLoggedIn){
+    return <RestrictLogin/>
+  }
+
+  if(!isQuestion){
+    return <RestrictQuestion/>
+  }
+
+  if(!isAuthorised){
+    return < RestrictUnauthorized />
+  }
+
+  if(!isServer){
+    return < RestrictServerSide />
   }
 
   return (

@@ -32,6 +32,10 @@ const EditorSetting = ({}) =>
                     <ThemeDropdown />
                 </div>
 
+                <div className="flex flex-row justify-between items-center text-center mb-6">
+                    <SubmissionDropDown />
+                </div>
+
                 <div className="editor-button flex flex-row justify-between items-center text-center mb-6 ">
                     <button onClick={setWhiteBoard} className={` mb-4 bg-[#4C5ADF] overflow-hidden w-40 rounded-[0.25rem]   flex flex-row items-center   px-2 py-2  text-sm font-normal justify-center   hover:opacity-100 opacity-80`}>
                         <span className=" text-[14px] text-white">White Board </span>

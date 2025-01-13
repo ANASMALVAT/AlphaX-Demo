@@ -10,7 +10,6 @@ export async function userAuthenticationGithub(code) {
     }
 
     try {
-       
         const config = {
           withCredentials:true,
         };

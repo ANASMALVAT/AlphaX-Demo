@@ -1,8 +1,9 @@
 import axios from "axios";
 
-const LOGIN_CREDENTIALS = process.env.REACT_APP_FETCH_LOGIN_CREDENTIALS;
 
 export async function fetchLoginCredentials() {
+  const LOGIN_CREDENTIALS = process.env.REACT_APP_FETCH_LOGIN_CREDENTIALS;
+  
     try {
         const response = await axios.get(LOGIN_CREDENTIALS);
         if (response.status === 200) {

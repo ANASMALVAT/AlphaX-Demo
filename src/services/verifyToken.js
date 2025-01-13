@@ -1,14 +1,19 @@
-
 import axios from "axios";
 import { toast } from "react-toastify";
 
 const VERIFY_TOKEN = process.env.REACT_APP_VERIFY_TOKEN;
 
 export async function verifyToken() {
-
+  
+    const config = {
+        headers: {
+          Authorization: `${localStorage.getItem('csrf-token')}`, 
+        },
+        withCredentials:true,
+      }; 
     try {
 
-      const response = await axios.get(VERIFY_TOKEN);
+      const response = await axios.get(VERIFY_TOKEN, config);
         if (response.status === 200) {
           localStorage.setItem('csrf-token', response.data.csrfToken);
           

@@ -90,7 +90,40 @@ const AlphaNavbar  = () => {
                             </li>
                             <li>
                                 { !showLoginButton && <div  className="w-[70px]  h-full justify-center align-bottom text-center opacity-0"></div> }
-                            
+                                
+                                {
+                                showLoginButton && 
+                                (
+                                    IsUserLoggedIn ? 
+                                    (
+                                        <Popup
+                                        trigger =
+                                        {
+                                            <div onClick={() => setIsOpen(true)} id="logout" className="w-[70px] mt-2  text-center hover:scale-110 hover:transition-transform  hover:duration-200  pb-1 items-center min-w-[40px] flex gap-3 h-full justify-center align-bottom text-center">
+                                                <img src={userProfile} className=" flex justify-center  rounded-full " width={26} height={26}></img>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 292.362 292.362" className=" h-2 w-2">
+                                                    <path d="M286.935 69.377q-5.422-5.425-12.848-5.424H18.274q-7.426 0-12.85 5.424Q-.001 74.807 0 82.228t5.424 12.847l127.907 127.907q5.43 5.427 12.85 5.428c7.42.001 9.233-1.811 12.847-5.428L286.935 95.074c3.613-3.617 5.427-7.898 5.427-12.847s-1.814-9.229-5.427-12.85"></path>
+                                                </svg>
+                                            </div>
+                                        }
+                                        open={isOpen}
+                                        position={'bottom center'}
+                                        contentStyle={{minWidth:"250px", width:"250px",height:"200px",flexGrow : 1, borderRadius:"4px",zIndex:"1001",background:"transparent",border:"none",outline:"none"}}
+                                        >
+                                        <ProfileTooltip  setIsOpen={setIsOpen} logout={logout}/>
+                                    </Popup>
+                                    )
+                                    :
+                                    (
+                                        <div id="login" className=" w-[70px]  h-full justify-center align-bottom text-center">
+                                            <button onClick={showLogin} className="login-ul flex h-full w-[50px] flex-row hover:duration-100 text-white justify-between p-2 items-center text-center">
+                                                <div className=" hover:underline text-[16px]" href="#">
+                                                    <h1>Login</h1>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    )
+                                )}
                             </li>
                         </ul>
                     </div>

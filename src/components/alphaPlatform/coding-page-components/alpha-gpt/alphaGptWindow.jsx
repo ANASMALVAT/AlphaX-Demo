@@ -39,19 +39,16 @@ const AlphaGPTWindow = () => {
 
 
   const askAlpha = async (userInput,setLoading) => {
-
-    
-
     if (userInput.trim() !== '') {
 
-    let storedMessages = localStorage.getItem('stored-messages');
-    let parsedMessages = storedMessages ? JSON.parse(storedMessages) : [];
-    let currentChats = parsedMessages;
-    let tempChats = []
-    tempChats.push({ role: 'user', content: userInput });
-    const updatedMessages = [...parsedMessages, ...tempChats];
-    localStorage.setItem('stored-messages', JSON.stringify(updatedMessages));
-    currentChats.push({ role: 'user', content: userInput });
+      let storedMessages = localStorage.getItem('stored-messages');
+      let parsedMessages = storedMessages ? JSON.parse(storedMessages) : [];
+      let currentChats = parsedMessages;
+      let tempChats = []
+      tempChats.push({ role: 'user', content: userInput });
+      const updatedMessages = [...parsedMessages, ...tempChats];
+      localStorage.setItem('stored-messages', JSON.stringify(updatedMessages));
+      currentChats.push({ role: 'user', content: userInput });
 
       setMessages((prevMessages) => [
         ...prevMessages,
@@ -100,7 +97,8 @@ const AlphaGPTWindow = () => {
         localStorage.setItem('stored-messages', JSON.stringify(updatedMessages));
 
       } catch (error) {
-        toast('AlphaGPT is not available for Demo Version!');
+        toast('AlphaGPT is under maintenance!');
+        showError();
       }
       setLoading(false);
     }

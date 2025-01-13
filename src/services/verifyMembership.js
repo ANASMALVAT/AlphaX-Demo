@@ -5,9 +5,14 @@ const VERIFY_MEMBERSHIP = process.env.REACT_APP_VERIFY_MEMBERSHIP;
 
 export async function verifyMembership() {
   
-   
+    const config = {
+        headers: {
+          Authorization: `${localStorage.getItem('csrf-token')}`, 
+        },
+        withCredentials:true,
+      }; 
     try {
-      const response = await axios.get(VERIFY_MEMBERSHIP);
+      const response = await axios.get(VERIFY_MEMBERSHIP, config);
       return response;
       }
       catch (err) {

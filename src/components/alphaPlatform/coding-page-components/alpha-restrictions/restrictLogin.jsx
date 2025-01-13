@@ -8,6 +8,7 @@ const RestrictLogin = () => {
     const dispatch = useDispatch();
     
     const showLogin = () => {
+        console.log("here");
         dispatch(toggelLoginWindowTrue());
     }
 

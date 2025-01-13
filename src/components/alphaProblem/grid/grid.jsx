@@ -27,6 +27,10 @@ const Grid = ({problemInfo, isUserLoggedIn, isProblemSolved}) => {
       };
 
     const showVisualization = async () => {
+        if(!IsUserLoggedIn){
+            loginNotification("Please login to visualize");
+            return;
+        }
         setOpen(true);
         const questionVisualizationDetail = await fetchQuestionVisualize(problemInfo?.question_id);
         try{
@@ -110,7 +114,6 @@ const Grid = ({problemInfo, isUserLoggedIn, isProblemSolved}) => {
                 closeOnEscape
                 position={"top center"}
                 on={['hover']}
-                
                 arrow={"bottom center" !== 'center center'}
             >
                 <div className='flex flex-col justify-center items-center'>
