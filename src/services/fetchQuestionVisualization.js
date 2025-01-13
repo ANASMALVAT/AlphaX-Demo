@@ -6,7 +6,6 @@ export async function fetchQuestionVisualize(question_id) {
     try {
     const config = {
         headers: {
-          Authorization: `${localStorage.getItem('csrf-token')}`, 
           question_id:question_id
         },
         withCredentials:true,

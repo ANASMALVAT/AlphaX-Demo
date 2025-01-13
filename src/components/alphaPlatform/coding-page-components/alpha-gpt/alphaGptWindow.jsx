@@ -100,8 +100,7 @@ const AlphaGPTWindow = () => {
         localStorage.setItem('stored-messages', JSON.stringify(updatedMessages));
 
       } catch (error) {
-        toast('AlphaGPT is under maintenance!');
-        showError();
+        toast('AlphaGPT is not available for Demo Version!');
       }
       setLoading(false);
     }
