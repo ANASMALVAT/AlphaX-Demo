@@ -9,7 +9,7 @@ import ConsoleSlidingPane from "../sliding-panel/consoleSlidingPane";
 import MenuIcon from '@mui/icons-material/Menu';
 import {useSelector, useDispatch} from "react-redux";
 import { defineTheme } from "../../../../data/themeOptions";
-import { cancelWindow,maximizeWindow,partialWindow } from "../../../../redux/slices/outputWindowSlice";
+import { cancelWindow, maximizeWindow, partialWindow } from "../../../../redux/slices/outputWindowSlice";
 import OutputWindowButtons from "../buttons/outputWindowButtons";
 import { Link } from "react-router-dom";
 import CodeOutput from "./codeOutput";

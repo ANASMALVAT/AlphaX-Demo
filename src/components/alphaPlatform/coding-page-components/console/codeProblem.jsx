@@ -41,7 +41,6 @@ const   CodeProblem = () => {
         <>
             <div className=" code-problem flex flex-col h-full w-full whitespace-pre overflow-auto rounded-md ">
                 <div className="">
-
                     {
                         companies && companies.length > 0 && 
                         <div className=" mb-4">
@@ -71,20 +70,20 @@ const   CodeProblem = () => {
                 </div>
 
                 { 
-                <div name ="example-1">
-                    <h1 className=" problem-example text-xl antialiased  font-normal tracking-semibold landing-relaxed  text-white mb-3">Example </h1>
-                    <div className="w-full mb-4">
-                        <SyntaxHighlighter language="javascript" wrapLongLines={true} customStyle={{borderRadius:"8px",fontSize:"16px"}} style={tomorrowNightBlue}>
-                            {problemExampleInput}
-                        </SyntaxHighlighter>
+                    <div name ="example-1">
+                        <h1 className=" problem-example text-xl antialiased  font-normal tracking-semibold landing-relaxed  text-white mb-3">Example </h1>
+                        <div className="w-full mb-4">
+                            <SyntaxHighlighter language="javascript" wrapLongLines={true} customStyle={{borderRadius:"8px",fontSize:"16px"}} style={tomorrowNightBlue}>
+                                {problemExampleInput}
+                            </SyntaxHighlighter>
+                        </div>
+                        <h1 className=" problem-example text-xl antialiased  font-normal tracking-semibold landing-relaxed  text-white mb-3">Output</h1>
+                        <div name="output" className="w-full mb-5">
+                            <SyntaxHighlighter language="javascript" wrapLongLines={true} customStyle={{borderRadius:"8px",fontSize:"16px"}} style={tomorrowNightBlue}>
+                                {problemExampleOutput}
+                            </SyntaxHighlighter>
+                        </div>
                     </div>
-                    <h1 className=" problem-example text-xl antialiased  font-normal tracking-semibold landing-relaxed  text-white mb-3">Output</h1>
-                    <div name="output" className="w-full mb-5">
-                        <SyntaxHighlighter language="javascript" wrapLongLines={true} customStyle={{borderRadius:"8px",fontSize:"16px"}} style={tomorrowNightBlue}>
-                            {problemExampleOutput}
-                        </SyntaxHighlighter>
-                    </div>
-                </div>
                 }
 
                 { problemVisualization &&

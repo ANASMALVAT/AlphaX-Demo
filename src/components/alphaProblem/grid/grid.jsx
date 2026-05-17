@@ -8,11 +8,10 @@ import { toast } from "react-toastify";
 import "./styles/grid.css"
 
 
-const Grid = ({problemInfo, isUserLoggedIn, isProblemSolved}) => {
+const Grid = ({problemInfo,  isProblemSolved}) => {
 
     const problemCategoryType = useSelector((state) => state.problemType.difficulty);
     const[questionVisualizationData,setQuestionVisualizationData] = useState(null);
-    const IsUserLoggedIn = useSelector((state) => state.userLogin.userLogin);
     const [open,setOpen] = useState(false);
     
 
@@ -27,10 +26,7 @@ const Grid = ({problemInfo, isUserLoggedIn, isProblemSolved}) => {
       };
 
     const showVisualization = async () => {
-        if(!IsUserLoggedIn){
-            loginNotification("Please login to visualize");
-            return;
-        }
+  
         setOpen(true);
         const questionVisualizationDetail = await fetchQuestionVisualize(problemInfo?.question_id);
         try{
@@ -52,7 +48,7 @@ const Grid = ({problemInfo, isUserLoggedIn, isProblemSolved}) => {
         <div className=' problem-grid  flex flex-row items-center justify-between h-12 pl-3 shadow-md rounded-sm bg-[#F5F5F5]'>
             <ProblemVisualization open={open} setOpen={setOpen} questionVisualizationData={questionVisualizationData} />
             {
-                isUserLoggedIn && isProblemSolved &&
+                    isProblemSolved &&
                 <Popup
                 trigger={
                     <div className=' w-5 h-5  rounded-full border border-gray-300 bg-green-700'>
@@ -73,7 +69,7 @@ const Grid = ({problemInfo, isUserLoggedIn, isProblemSolved}) => {
             }
 
             {
-                isUserLoggedIn && !isProblemSolved &&
+                    !isProblemSolved &&
                 <Popup
                 trigger={
                     <div className=' w-5 h-5  rounded-full border border-gray-300 bg-transparent'>
@@ -94,7 +90,7 @@ const Grid = ({problemInfo, isUserLoggedIn, isProblemSolved}) => {
             }
             
             {
-                !isUserLoggedIn && !isProblemSolved && <></>
+                 !isProblemSolved && <></>
             }
 
             <Link to={`/problems/${problemInfo?.question_id}`}>

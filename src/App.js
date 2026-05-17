@@ -27,43 +27,19 @@ function App() {
 
   const dispatch = useDispatch();
 
-  useLayoutEffect(async () => {
-      try{
-        const response = await fetchLoginCredentials();
-        dispatch(setLoginCredentials(response.credentials));
-        if(localStorage.getItem('csrf-token')){
-          const verifyResult = await verifyToken();
-          if(!verifyResult.success){
-            dispatch(toggelUserLoginFalse());
-            localStorage.clear();
-          }else{
-            dispatch(toggelUserLoginTrue());
-            dispatch(setAlphaUser({
-                user_mail: verifyResult.userData.user_mail,
-                user_name: verifyResult.userData.user_name,
-                user_profile: verifyResult.userData.user_profile
-              }));
-            sessionStorage.setItem('user_completed_problems',JSON.stringify(verifyResult.userData.user_completed_problems));
-            const userMembership = await verifyMembership();
-            const userMembershipData = userMembership.data;
-            if(userMembershipData?.success && userMembershipData?.isPremium && userMembershipData?.premiumUser){
-              dispatch(setAlphaPremiumUser(userMembershipData.premiumUser));
-            }
-          }
-        }
-        else{
-          dispatch(toggelUserLoginFalse());
-        }
+  // Login system has been removed. Seed a static "guest" csrf token so the
+  // existing API helpers (which read csrf-token from localStorage and pass
+  // it in the Authorization header) keep working without an actual login.
+  useLayoutEffect(() => {
+    if (!localStorage.getItem("csrf-token")) {
+      localStorage.setItem("csrf-token", "guest");
     }
-    catch(error) {
-      toast("Alpha Algo is under maintainence!");
-    }
-  },[])
+    dispatch(toggelUserLoginTrue());
+  }, [dispatch]);
 
   return (
     
     <div className="App">
-      <UserLogin/>
       <ToastContainer
         position="top-right"
         pauseOnHover={false}

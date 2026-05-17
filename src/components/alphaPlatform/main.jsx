@@ -121,11 +121,7 @@ const AlphaPlatform = ({}) => {
   {
     async function fetchData() {
       try {
-        if (localStorage.getItem('csrf-token') == null) {
-          setIsLoading(false);
-          setIsLoggedIn(false);
-          return;
-        }
+        // Login system removed — always fetch the problem.
         localStorage.removeItem('stored-messages');
         const problemDetail = await authorizedUser(problemId);
         if(problemDetail){
@@ -242,18 +238,7 @@ const AlphaPlatform = ({}) => {
       return;
     }
 
-    try{
-      const verifyResult = await verifyToken();
-      if(!verifyResult.success){
-        dispatch(toggelUserLoginFalse);
-        handleSessionExpired();
-        return;
-      }
-    }catch(error){
-      dispatch(toggelUserLoginFalse);
-      handleSessionExpired();
-      return;
-    }
+    // Login system removed — skip the verifyToken/session check.
     if(!runCode){
       const currentDateTime = new Date().toLocaleString('en-GB', { timeZone: 'UTC' });
       let userSubmission = JSON.parse(sessionStorage.getItem('user-submission')) || [];
@@ -360,18 +345,6 @@ const AlphaPlatform = ({}) => {
             </div>
         </div>
         )
-  }
-
-  if(!isLoggedIn){
-    return <RestrictLogin/>
-  }
-
-  if(!isQuestion){
-    return <RestrictQuestion/>
-  }
-
-  if(!isAuthorised){
-    return < RestrictUnauthorized />
   }
 
   if(!isServer){
