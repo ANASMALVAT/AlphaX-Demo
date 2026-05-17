@@ -27,7 +27,7 @@ const CodingEnviorment = () => {
             </div>
             
             <div className="enviorment-grid  flex overflow-visisble justify-center ">
-                <img className="enviorment-img " src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1998567/coding-svg-clipart-md.png" ></img>
+                <img className="enviorment-img " src="https://alpha-images.s3.amazonaws.com/coding-languages.gif" alt="Coding languages" ></img>
             </div>
          
         </div>
