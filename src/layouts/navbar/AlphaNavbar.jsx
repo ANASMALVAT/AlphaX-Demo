@@ -80,11 +80,11 @@ const AlphaNavbar  = () => {
                                 >   
                                 <ToolTip />
                             </Popup>
-                            <Link to={"/purchase"}>
+                            {/* <Link to={"/purchase"}>
                                 <li>
                                     <a href="/purchase" class="hover:underline me-4 md:me-4">Pricing </a>
                                 </li>
-                            </Link>
+                            </Link> */}
                             <li>
                                     <a href="#" class="hover:underline me-3 md:me-3"></a>
                             </li>

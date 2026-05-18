@@ -14,12 +14,12 @@ const ToolTip = () => {
                         </div>
                     </Link>
                 
-                    <Link to='/xvlogs' className='product-xblogs w-[100%] mt-1   rounded   '>
+                    {/* <Link to='/xvlogs' className='product-xblogs w-[100%] mt-1   rounded   '>
                         <div className=" text-algoblack product-xblogs  flex flex-col w-full justify-start p-3  h-20 items-start rounded-[0.25rem] border-none ">
                             <h1 className=' text-xl font-semibold'>AlphaV</h1>
                             <p className='text-p'>Prepare your next interview </p>
                         </div>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
     </>
