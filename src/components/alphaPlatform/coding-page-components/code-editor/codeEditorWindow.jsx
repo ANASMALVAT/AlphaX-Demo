@@ -189,7 +189,7 @@ const CodeEditorWindow = ({onChangeData,code,outputDetail,runCode }) =>
                 />
             </div>
 
-            <div className="flex h-14 p-4 w-full bg-[#00182D] justify-end items-center rounded-[0.25rem]  absolute bottom-0"> 
+            <div className="flex h-14 p-4 w-full bg-[#00182D] justify-end items-center rounded-[0.25rem]  absolute bottom-0 z-20">
                 <div className=" flex gap-2 ml-2">
                    
                     <button
